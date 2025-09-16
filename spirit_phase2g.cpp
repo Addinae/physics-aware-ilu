@@ -1,3 +1,21 @@
+/**
+ * @file main.cpp
+ * @author Aditya Kumar (ms23175@iisermohali.ac.in)
+ * @brief Physics-Aware ILU Preconditioner for Quantum Transport Simulations.
+ * @version 0.1
+ * @date 2024-09-10
+ *
+ * @copyright Copyright (c) 2024 Aditya Kumar (MIT License)
+ *
+ * This code implements a physics-informed ILU preconditioner designed to
+ * accelerate iterative solvers (BiCGSTAB/GMRES) in electronic structure
+ * and quantum transport problems. It enhances standard algebraic methods
+ * by preserving matrix entries critical to quantum physics (transport pathways,
+ * contact atoms, energy resonance).
+ *
+ * Compile with: g++ -O3 -std=c++11 -fopenmp main.cpp -o main
+ * Usage: ./main <matrix_file.mtx>
+ */
 #include <iostream>
 #include <vector>
 #include <complex>
@@ -951,4 +969,5 @@ int main(int argc, char* argv[]) {
     cout << "finish" << endl;
     
     return 0;
+
 }
